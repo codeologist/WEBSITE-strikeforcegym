@@ -293,7 +293,8 @@ header::before {
 @media all and (max-width: 699px) and (min-width: 320px) {
   #about,
   #who,
-  #what {
+  #what,
+  #menu {
     display: none;
   }
 }
