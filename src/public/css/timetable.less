@@ -30,7 +30,7 @@
       text-indent:20px;
     }
 
-    tr:nth-child(2n+1) td{
+    tr:nth-child(2n) td{
       background-color:#f1f1f1 ;
     }
     .weekday{
@@ -44,4 +44,52 @@
       border-top:1px solid white;
 
     }
+  }
+
+  @media all and (max-width: 699px) and (min-width: 320px) {
+
+    #timetable {
+      margin:0;
+      padding:0;
+
+      table {
+        width: 100%;
+        margin:0;
+        border: 0;
+      }
+
+      td {
+        line-height: 2;
+        font-size: 1.5rem;
+        text-indent:2vw;
+        border: 0;
+      }
+
+      h2 {
+
+        background-color: #444;
+        color: #bbbbbb;;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-shadow: 0 0 0 transparent;
+        margin: 0;
+        padding: 1rem;
+        font-style: normal;
+
+        span {
+          display:none;
+        }
+      }
+
+      .weekday {
+        border: 0;
+        text-indent: 1vw;
+        padding:0;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 2;
+        background-color: #bbbbbb;
+      }
+    }
+
   }

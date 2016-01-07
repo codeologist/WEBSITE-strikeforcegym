@@ -2,7 +2,6 @@
 
   header{
     position: relative;
-    bxackground-color: rgba( 255,0,0, .7 );
     height:31.25vw;
     padding-top: 11.25vw;
 
@@ -37,12 +36,32 @@
       right: 0;
       position: absolute;
       z-index: -1;
-
-      //-webkit-filter: blur(3px);
-      //-moz-filter: blur(3px);
-      //-o-filter: blur(3px);
-      //-ms-filter: blur(3px);
-      //filter: blur(3px);
     }
+  }
 
+  @media all and (max-width: 699px) and (min-width: 320px) {
+
+    header{
+      overflow: hidden;
+      background-color: #FF4136;
+      margin:0;
+      height: auto;
+      padding:  0;
+
+      h1,h2,h3{
+        padding: 1.5rem 0;
+        margin:0;
+        text-align:center;
+        color: black;
+        text-shadow: 0;
+        font-size: 2rem;border-bottom: 1px dotted black;
+      }
+      h2 {
+        display:none;
+      }
+      h2,h3{
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
   }

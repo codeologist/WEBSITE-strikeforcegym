@@ -74,9 +74,25 @@ button {
   color: #444;
   font-weight: bold;
 }
+@media all and (max-width: 699px) and (min-width: 320px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  section h2 {
+    text-shadow: 0 0 0 transparent;
+    margin: 0;
+    padding: 0;
+  }
+  #about,
+  #who,
+  #what,
+  #menu {
+    display: none;
+  }
+}
 header {
   position: relative;
-  bxackground-color: rgba(255, 0, 0, 0.7);
   height: 31.25vw;
   padding-top: 11.25vw;
 }
@@ -109,6 +125,34 @@ header::before {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  header {
+    overflow: hidden;
+    background-color: #FF4136;
+    margin: 0;
+    height: auto;
+    padding: 0;
+  }
+  header h1,
+  header h2,
+  header h3 {
+    padding: 1.5rem 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+    text-shadow: 0;
+    font-size: 2rem;
+    border-bottom: 1px dotted black;
+  }
+  header h2 {
+    display: none;
+  }
+  header h2,
+  header h3 {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
 #menu {
   box-shadow: 0px 0 15px 5px rgba(0, 0, 0, 0.6);
@@ -228,7 +272,7 @@ header::before {
   font-size: 20px;
   text-indent: 20px;
 }
-#timetable tr:nth-child(2n+1) td {
+#timetable tr:nth-child(2n) td {
   background-color: #f1f1f1 ;
 }
 #timetable .weekday {
@@ -240,6 +284,45 @@ header::before {
   border-left: 1px solid white;
   border-right: 1px solid white;
   border-top: 1px solid white;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #timetable {
+    margin: 0;
+    padding: 0;
+  }
+  #timetable table {
+    width: 100%;
+    margin: 0;
+    border: 0;
+  }
+  #timetable td {
+    line-height: 2;
+    font-size: 1.5rem;
+    text-indent: 2vw;
+    border: 0;
+  }
+  #timetable h2 {
+    background-color: #444;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-shadow: 0 0 0 transparent;
+    margin: 0;
+    padding: 1rem;
+    font-style: normal;
+  }
+  #timetable h2 span {
+    display: none;
+  }
+  #timetable .weekday {
+    border: 0;
+    text-indent: 1vw;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2;
+    background-color: #bbbbbb;
+  }
 }
 #contact {
   position: relative;
@@ -258,6 +341,9 @@ header::before {
   font-size: 2vw;
   line-height: 1.5;
   width: 45vw;
+}
+#contact #info1 a {
+  display: inline-block;
 }
 #contact #address,
 #contact #address2 {
@@ -291,10 +377,52 @@ header::before {
   top: 0;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
-  #about,
-  #who,
-  #what,
-  #menu {
+  #contact {
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  #contact br {
     display: none;
+  }
+  #contact h2 {
+    line-height: 2;
+    font-size: 1.5rem;
+    text-indent: 2vw;
+    font-style: normal;
+    text-shadow: 0 0 0 transparent;
+    color: #bbb;
+  }
+  #contact #info1 {
+    white-space: nowrap;
+    padding: 2vw;
+  }
+  #contact #info1 p {
+    display: none;
+  }
+  #contact #address,
+  #contact #address2,
+  #contact #map,
+  #contact #map2 {
+    width: 100%;
+    height: auto;
+    position: static;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  #contact #address p,
+  #contact #address2 p {
+    background-color: #bbb;
+    color: #444;
+    line-height: 2.5;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #contact #map,
+  #contact #map2 {
+    height: 300px;
+    width: 100%;
   }
 }

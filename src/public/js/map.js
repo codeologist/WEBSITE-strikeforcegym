@@ -205,6 +205,16 @@ function init() {
         //]
     };
 
+    var mapOptions2 = {
+
+        zoom: 17, // How zoomed in you want the map to start at (always required)
+        scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(-43.5327838,172.6455112),
+    };
+
+
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement1 = document.getElementById('map');
@@ -212,7 +222,7 @@ function init() {
 
     // Create the Google Map using our element and options defined above
     var map1 = new google.maps.Map(mapElement1, mapOptions);
-    var map2 = new google.maps.Map(mapElement2, mapOptions);
+    var map2 = new google.maps.Map(mapElement2, mapOptions2);
 
 
         // Let's also add a marker while we're at it
@@ -224,8 +234,8 @@ function init() {
 
     });
 
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(-36.9025367,174.688000),
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(-43.5327838,172.6455112),
         map: map2,
         title: 'Strikeforce Gym Cantebury',
         icon: 'img/map-marker.png'
