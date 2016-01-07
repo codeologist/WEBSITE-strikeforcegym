@@ -1,0 +1,81 @@
+
+  html{
+    font-family: arial;
+  }
+  body{
+
+    color:#444;
+    padding: 0 0 0 0;
+    margin:0;
+    background-color: white;
+
+  }
+  .fixed{
+    position: fixed;
+    top:0;
+    left:0;right:0;
+    z-index:100000;
+  }
+
+  section {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 3vw 1vw 1vw 1vw;
+    h2 {
+      font-size: 2vw;
+      text-shadow: 0 0 1vw rgba( 128,128,128, 0.7);
+      margin-bottom: 1vw;
+    }
+  }
+
+  body section:nth-child(2n+1)  {
+    background-color:  #f1f1f1;
+    border-top:2px solid #ccc;
+    border-bottom:2px solid #ccc;
+  }
+
+  h1,h2,h3,h4{
+    text-transform: uppercase;
+    font-style: italic;
+    text-shadow: 0 0 1vw rgba( 128,128,128, 0.7);
+    padding:0;
+    margin:0;
+    color: #444;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+  a {
+    text-decoration: none;
+
+    &:link{
+      color:blue;
+    }
+    &:visited{
+      text-decoration: underline;
+    }
+    &:hover{
+      color:red;
+      text-decoration: underline;
+    }
+  }
+
+  a[name]{
+    display:block;
+  }
+
+  input,textarea,button{
+    margin-top: 1vw;
+    font-size: 1vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  button {
+    box-shadow:  0 0 1px 1px  rgba(0,0,0,.6);
+    background-color : red;
+    color:#444;
+    font-weight:bold;
+  }
