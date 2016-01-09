@@ -117,8 +117,9 @@ header h3 {
 }
 header::before {
   content: "";
-  background-image: url(/img/sfg1.jpg);
+  background-image: url(/img/IMG_0867.JPG);
   background-size: cover;
+  background-position-y: 100%;
   top: 0;
   left: 0;
   bottom: 0;
