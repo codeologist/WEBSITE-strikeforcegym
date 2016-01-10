@@ -2,58 +2,22 @@
   #contact  {
 
     position: relative;
-    background-color: #444;
-    color: white;
+    background-color: #f1f1f1;
+    color: @sfgdark;
     height: 70vw;
     padding: 3vw;
+    font-size: 1.6rem;
 
-    h2, h3, h4 {
-      color:white;
-      text-shadow: 0 0 1vw rgba( 255, 255, 255, 0.7);
-    }
-
-
-
-    #info1 {
-      font-size: 2vw;
-      line-height: 1.5;
-      width: 45vw;
-
-
-      a {
-        display: inline-block;
-      }
-    }
-
-
-    #address, #address2 {
-      font-size: 2vw;
-      line-height: 1.5;
-      position: absolute;
-      width: 45vw;
-      height: 21vw;
-      right: 3vw;
-      top: 5vw;
-      padding:3vw;
-      box-sizing: border-box;
-      p{
-        margin:0;
-        padding:0;
-      }
-    }
-    #address2{
-      top:30vw;
-    }
-    #map, #map2{
-      position: absolute;
-      width: 21vw;
-      height:21vw;
-    }
-    #map, #map2{
-      right: 0;
-      top: 0;
+    line-height: 1.5;
+    br{display:none;}
+    #map,#map2{
+      height: 300px;
+      width: 100%;
+      margin: 2rem 0 0 0;
     }
   }
+
+
 
   @media all and (max-width: 699px) and (min-width: 320px) {
     #contact  {
@@ -61,7 +25,7 @@
       height: auto;
       padding:0;
       margin:0;
-      br{display:none;}
+
       h2{
         line-height: 2;
         font-size: 1.5rem;
@@ -97,9 +61,6 @@
 
         }
       }
-      #map,#map2{
-        height: 300px;
-        width: 100%;
-      }
+
     }
   }

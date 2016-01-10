@@ -7,13 +7,6 @@ body {
   margin: 0;
   background-color: white;
 }
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100000;
-}
 section {
   overflow: hidden;
   margin: 0 auto;
@@ -26,8 +19,6 @@ section h2 {
 }
 body section:nth-child(2n+1) {
   background-color: #f1f1f1;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
 }
 h1,
 h2,
@@ -47,14 +38,18 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: blue;
+  color: #00237D;
 }
 a:visited {
   text-decoration: underline;
 }
 a:hover {
-  color: red;
+  color: #D00000;
   text-decoration: underline;
+}
+footer {
+  font-size: 3rem;
+  padding: 5rem;
 }
 a[name] {
   display: block;
@@ -156,13 +151,12 @@ header::before {
   }
 }
 #menu {
-  box-shadow: 0px 0 15px 5px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #00237D;
 }
 #menu ul {
   padding: 0 20px 0 0;
   margin: 0;
-  text-align: right;
+  text-align: center;
   line-height: 60px;
 }
 #menu li {
@@ -172,40 +166,83 @@ header::before {
   font-size: 20px;
   padding-right: 10px;
   text-transform: uppercase;
-  font-style: italic;
+  color: #D00000;
+}
+#menu a:hover {
   color: white;
 }
-#about #section1,
-#about #section2 {
+.fixed #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+  background-color: rgba(0, 35, 125, 0.8);
+  box-shadow: 0 0 15px 5px rgba(68, 68, 68, 0.8);
+}
+.fixed #benefits {
+  margin-top: 60px;
+}
+#benefits {
   overflow: hidden;
-  float: left;
-  box-sizing: border-box;
-  padding: 2vw;
+  background-color: #444;
 }
-#about #section1 {
-  width: 68vw;
-  margin-right: 1vw;
+#benefits h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 8rem;
+  color: black;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: normal;
+  text-shadow: 0 0 transparent;
 }
-#about #section1 p {
-  font-size: 2vw;
-  line-height: 1.5;
-  margin: 0 0 .5vw 0;
+#benefits span {
+  padding-right: 2rem;
 }
-#about #section1 p + p {
-  text-indent: 2vw;
+#benefits span:first-child {
+  color: #00237D;
 }
-#about #section2 {
-  width: 29vw;
-  border: 1px solid #ccc;
+#benefits span + span + span {
+  color: white;
 }
-#about #section2 h2 {
-  font-size: 2vw;
-  color: #444;
-  text-shadow: 0 0 1vw rgba(128, 128, 128, 0.7);
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #benefits h2 {
+    font-size: 2rem;
+  }
 }
-#about #section2 p {
-  font-size: 1vw;
-  line-height: 1.5;
+#credentials {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+#boast {
+  background-color: #D00000;
+  overflow: hidden;
+  text-align: center;
+}
+#boast h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 8rem;
+  color: white;
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: normal;
+  text-shadow: 0 0 transparent;
+}
+#boast span {
+  padding-right: 2rem;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #boast h2 {
+    font-size: 2rem;
+  }
 }
 #who {
   padding: 3vw;
@@ -327,64 +364,27 @@ header::before {
 }
 #contact {
   position: relative;
-  background-color: #444;
-  color: white;
+  background-color: #f1f1f1;
+  color: #444;
   height: 70vw;
   padding: 3vw;
-}
-#contact h2,
-#contact h3,
-#contact h4 {
-  color: white;
-  text-shadow: 0 0 1vw rgba(255, 255, 255, 0.7);
-}
-#contact #info1 {
-  font-size: 2vw;
+  font-size: 1.6rem;
   line-height: 1.5;
-  width: 45vw;
 }
-#contact #info1 a {
-  display: inline-block;
-}
-#contact #address,
-#contact #address2 {
-  font-size: 2vw;
-  line-height: 1.5;
-  position: absolute;
-  width: 45vw;
-  height: 21vw;
-  right: 3vw;
-  top: 5vw;
-  padding: 3vw;
-  box-sizing: border-box;
-}
-#contact #address p,
-#contact #address2 p {
-  margin: 0;
-  padding: 0;
-}
-#contact #address2 {
-  top: 30vw;
+#contact br {
+  display: none;
 }
 #contact #map,
 #contact #map2 {
-  position: absolute;
-  width: 21vw;
-  height: 21vw;
-}
-#contact #map,
-#contact #map2 {
-  right: 0;
-  top: 0;
+  height: 300px;
+  width: 100%;
+  margin: 2rem 0 0 0;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   #contact {
     height: auto;
     padding: 0;
     margin: 0;
-  }
-  #contact br {
-    display: none;
   }
   #contact h2 {
     line-height: 2;
@@ -420,10 +420,5 @@ header::before {
     font-weight: bold;
     text-align: center;
     font-size: 1rem;
-  }
-  #contact #map,
-  #contact #map2 {
-    height: 300px;
-    width: 100%;
   }
 }

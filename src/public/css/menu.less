@@ -1,14 +1,12 @@
 #menu{
-  box-shadow:  0px 0 15px 5px  rgba(0,0,0,.6);
-  background-color: rgba( 0,0,0,.8);
+
+  background-color: @sfgblue;
 
   ul{
     padding:0 20px 0 0;
     margin:0;
-    text-align:right;
+    text-align:center;
     line-height: 60px;
-
-
   }
 
 
@@ -19,8 +17,23 @@
     font-size: 20px;
     padding-right: 10px;
     text-transform: uppercase;
-    font-style: italic;
-    color: white;
-
+    color: @sfgred;
   }
+  a:hover {
+    color:white;
+  }
+}
+
+.fixed #menu{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100000;
+  background-color: @sfgblue80;
+  box-shadow:  0 0 15px 5px  @sfgdark80;
+
+}
+.fixed #benefits {
+  margin-top: 60px;
 }

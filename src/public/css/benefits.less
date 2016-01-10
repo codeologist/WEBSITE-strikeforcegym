@@ -1,0 +1,39 @@
+
+  #benefits{
+    overflow:hidden;
+    background-color: @sfgdark;
+
+    h2{
+      margin:0;
+      padding:0;
+      line-height: 1;
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 8rem;
+      color: black;
+      word-wrap: break-word;
+      font-style:normal;
+      font-weight:normal;
+      text-shadow:0 0 transparent;
+
+    }
+
+    span {
+      padding-right: 2rem;
+    }
+    span:first-child {
+      color:@sfgblue;
+    }
+
+    span+span+span {
+      color: white;
+
+    }
+
+  }
+
+  @media all and (max-width: 699px) and (min-width: 320px) {
+    #benefits h2 {
+      font-size: 2rem;
+    }
+  }

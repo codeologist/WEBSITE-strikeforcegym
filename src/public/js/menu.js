@@ -1,16 +1,14 @@
 
 jQuery("document").ready(function($){
 
-    var nav = $('#menu');
+    var body = $('body');
     var bp = $("header").outerHeight(true);
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > bp ) {
-            nav.addClass("fixed");
-            $('#about').css("margin-top","60px")
+            body.addClass("fixed");
         } else {
-            nav.removeClass("fixed");
-            $('#about').css("margin-top","0px")
+            body.removeClass("fixed");
         }
     });
 

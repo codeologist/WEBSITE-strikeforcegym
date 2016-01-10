@@ -10,12 +10,6 @@
     background-color: white;
 
   }
-  .fixed{
-    position: fixed;
-    top:0;
-    left:0;right:0;
-    z-index:100000;
-  }
 
   section {
     overflow: hidden;
@@ -30,8 +24,7 @@
 
   body section:nth-child(2n+1)  {
     background-color:  #f1f1f1;
-    border-top:2px solid #ccc;
-    border-bottom:2px solid #ccc;
+
   }
 
   h1,h2,h3,h4{
@@ -50,17 +43,21 @@
     text-decoration: none;
 
     &:link{
-      color:blue;
+      color:@sfgblue;
     }
     &:visited{
       text-decoration: underline;
     }
     &:hover{
-      color:red;
+      color:@sfgred;
       text-decoration: underline;
     }
   }
 
+  footer {
+    font-size: 3rem;
+    padding: 5rem;
+  }
   a[name]{
     display:block;
   }
@@ -79,6 +76,7 @@
     color:#444;
     font-weight:bold;
   }
+
 
   @media all and (max-width: 699px) and (min-width: 320px) {
 
