@@ -37,31 +37,47 @@
       position: absolute;
       z-index: -1;
     }
+
+    a {
+      display: none;
+    }
   }
 
   @media all and (max-width: 699px) and (min-width: 320px) {
 
     header{
       overflow: hidden;
-      background-color: #FF4136;
+      background-color: @sfgblue;
       margin:0;
       height: auto;
-      padding:  0;
+      padding:  0 0 3rem 0;
 
-      h1,h2,h3{
+      h1 {
         padding: 1.5rem 0;
         margin:0;
         text-align:center;
-        color: black;
+        color: @sfgred;
         text-shadow: 0;
-        font-size: 2rem;border-bottom: 1px dotted black;
+        font-size: 2rem;
       }
       h2 {
         display:none;
       }
-      h2,h3{
-        padding: 1rem;
-        font-size: 1rem;
+
+      a {
+        display: block;
+        overflow:hidden;
+        border-radius: 5px;
+        margin: 5vw;
+        background-color: white;
+        line-height: 3rem;
+        font-weight: bold;
+        text-indent: 2vw;
+        padding: 1px;
+        img {
+          vertical-align: middle;
+          float:right;
+        }
       }
     }
   }

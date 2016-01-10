@@ -1,52 +1,7 @@
 
 
 
-  #timetable{
 
-    padding: 2vw;
-    overflow:hidden;
-
-    text-align: center;
-
-    h2{
-      text-align: center;
-      font-size: 50px;
-      color: #444;
-      text-shadow: 0 0 10px rgba( 128,128,128, 0.7);
-      margin: 0 0 20px 0;
-    }
-
-
-    table {
-      margin-bottom: 20px;
-
-      width: 80%;
-      border: 1px solid #CCCCCC;
-      border-collapse: collapse;
-    }
-    td {
-      line-height: 1.8;
-      font-size: 20px;
-      text-indent:20px;
-    }
-
-    tr:nth-child(2n) td{
-      background-color:#f1f1f1 ;
-    }
-    .weekday{
-      text-align:left;
-      font-size: 40px;
-      line-height: 1.5;
-      padding-top: 50px;
-      padding-bottom: 25px;
-      border-left:1px solid white;
-      border-right:1px solid white;
-      border-top:1px solid white;
-
-    }
-  }
-
-  @media all and (max-width: 699px) and (min-width: 320px) {
 
     #timetable {
       margin:0;
@@ -56,6 +11,7 @@
         width: 100%;
         margin:0;
         border: 0;
+        border-collapse: collapse;
       }
 
       td {
@@ -63,17 +19,20 @@
         font-size: 1.5rem;
         text-indent:2vw;
         border: 0;
+        width: 20%;
       }
-
+      td+td{
+        width: auto;
+      }
       h2 {
 
         background-color: #444;
         color: #bbbbbb;;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         text-shadow: 0 0 0 transparent;
         margin: 0;
-        padding: 1rem;
+        line-height: 2;
         font-style: normal;
 
         span {
@@ -82,14 +41,33 @@
       }
 
       .weekday {
+        text-align:left;
         border: 0;
         text-indent: 1vw;
         padding:0;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.6rem;
         line-height: 2;
         background-color: #bbbbbb;
       }
     }
 
-  }
+    @media all and (max-width: 699px) and (min-width: 320px) {
+
+      #timetable{
+        h2 {
+          text-align: center;
+          span {
+            display: none;
+          }
+        }
+        .weekday {
+          text-align:center;
+        }
+        td, h2, .weekday {
+          font-size: 1rem;
+        }
+      }
+
+
+    }

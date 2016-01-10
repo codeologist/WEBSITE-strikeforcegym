@@ -14,19 +14,13 @@ section {
 }
 section h2 {
   font-size: 2vw;
-  text-shadow: 0 0 1vw rgba(128, 128, 128, 0.7);
   margin-bottom: 1vw;
-}
-body section:nth-child(2n+1) {
-  background-color: #f1f1f1;
 }
 h1,
 h2,
 h3,
 h4 {
   text-transform: uppercase;
-  font-style: italic;
-  text-shadow: 0 0 1vw rgba(128, 128, 128, 0.7);
   padding: 0;
   margin: 0;
   color: #444;
@@ -122,32 +116,42 @@ header::before {
   position: absolute;
   z-index: -1;
 }
+header a {
+  display: none;
+}
 @media all and (max-width: 699px) and (min-width: 320px) {
   header {
     overflow: hidden;
-    background-color: #FF4136;
+    background-color: #00237D;
     margin: 0;
     height: auto;
-    padding: 0;
+    padding: 0 0 3rem 0;
   }
-  header h1,
-  header h2,
-  header h3 {
+  header h1 {
     padding: 1.5rem 0;
     margin: 0;
     text-align: center;
-    color: black;
+    color: #D00000;
     text-shadow: 0;
     font-size: 2rem;
-    border-bottom: 1px dotted black;
   }
   header h2 {
     display: none;
   }
-  header h2,
-  header h3 {
-    padding: 1rem;
-    font-size: 1rem;
+  header a {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5vw;
+    background-color: white;
+    line-height: 3rem;
+    font-weight: bold;
+    text-indent: 2vw;
+    padding: 1px;
+  }
+  header a img {
+    vertical-align: middle;
+    float: right;
   }
 }
 #menu {
@@ -186,25 +190,29 @@ header::before {
 #benefits {
   overflow: hidden;
   background-color: #444;
+  text-align: center;
+  padding: 4rem 0;
 }
 #benefits h2 {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 1.8;
   text-transform: uppercase;
   display: inline-block;
-  font-size: 8rem;
+  font-size: 5rem;
   color: black;
   word-wrap: break-word;
   font-style: normal;
   font-weight: normal;
   text-shadow: 0 0 transparent;
+  letter-spacing: 2px;
+  text-indent: 4rem;
 }
 #benefits span {
   padding-right: 2rem;
 }
 #benefits span:first-child {
-  color: #00237D;
+  color: white;
 }
 #benefits span + span + span {
   color: white;
@@ -222,19 +230,22 @@ header::before {
   background-color: #D00000;
   overflow: hidden;
   text-align: center;
+  padding: 4rem 0;
 }
 #boast h2 {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 1.8;
   text-transform: uppercase;
   display: inline-block;
-  font-size: 8rem;
+  font-size: 4rem;
   color: white;
   word-wrap: break-word;
   font-style: normal;
   font-weight: normal;
   text-shadow: 0 0 transparent;
+  letter-spacing: 2px;
+  text-indent: 4rem;
 }
 #boast span {
   padding-right: 2rem;
@@ -288,95 +299,119 @@ header::before {
   background-color: green;
 }
 #timetable {
-  padding: 2vw;
-  overflow: hidden;
-  text-align: center;
-}
-#timetable h2 {
-  text-align: center;
-  font-size: 50px;
-  color: #444;
-  text-shadow: 0 0 10px rgba(128, 128, 128, 0.7);
-  margin: 0 0 20px 0;
+  margin: 0;
+  padding: 0;
 }
 #timetable table {
-  margin-bottom: 20px;
-  width: 80%;
-  border: 1px solid #CCCCCC;
+  width: 100%;
+  margin: 0;
+  border: 0;
   border-collapse: collapse;
 }
 #timetable td {
-  line-height: 1.8;
-  font-size: 20px;
-  text-indent: 20px;
+  line-height: 2;
+  font-size: 1.5rem;
+  text-indent: 2vw;
+  border: 0;
+  width: 20%;
 }
-#timetable tr:nth-child(2n) td {
-  background-color: #f1f1f1 ;
+#timetable td + td {
+  width: auto;
+}
+#timetable h2 {
+  background-color: #444;
+  color: #bbbbbb;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-shadow: 0 0 0 transparent;
+  margin: 0;
+  line-height: 2;
+  font-style: normal;
+}
+#timetable h2 span {
+  display: none;
 }
 #timetable .weekday {
   text-align: left;
-  font-size: 40px;
-  line-height: 1.5;
-  padding-top: 50px;
-  padding-bottom: 25px;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
+  border: 0;
+  text-indent: 1vw;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  background-color: #bbbbbb;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
-  #timetable {
-    margin: 0;
-    padding: 0;
-  }
-  #timetable table {
-    width: 100%;
-    margin: 0;
-    border: 0;
-  }
-  #timetable td {
-    line-height: 2;
-    font-size: 1.5rem;
-    text-indent: 2vw;
-    border: 0;
-  }
   #timetable h2 {
-    background-color: #444;
-    color: #bbbbbb;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    text-shadow: 0 0 0 transparent;
-    margin: 0;
-    padding: 1rem;
-    font-style: normal;
+    text-align: center;
   }
   #timetable h2 span {
     display: none;
   }
   #timetable .weekday {
-    border: 0;
-    text-indent: 1vw;
-    padding: 0;
-    margin: 0;
+    text-align: center;
+  }
+  #timetable td,
+  #timetable h2,
+  #timetable .weekday {
     font-size: 1rem;
-    line-height: 2;
-    background-color: #bbbbbb;
   }
 }
 #contact {
+  padding: 0;
+  margin: 0;
   position: relative;
-  background-color: #f1f1f1;
-  color: #444;
-  height: 70vw;
-  padding: 3vw;
+  background-color: white;
+  height: 1781px;
   font-size: 1.6rem;
   line-height: 1.5;
+}
+#contact h2 {
+  background-color: #444;
+  color: #bbb;
+  text-indent: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+#contact h3 {
+  color: white;
+}
+#contact a {
+  color: white;
+}
+#contact a:visited {
+  text-decoration: underline;
+  color: white;
+}
+#contact a:hover {
+  text-decoration: underline;
+  color: white;
+}
+#contact ul {
+  margin-top: .5rem;
 }
 #contact br {
   display: none;
 }
+#contact > div {
+  background-color: #00237D;
+  color: white;
+  padding: 2rem;
+  box-sizing: content-box;
+}
+#contact > div h3 {
+  color: #D00000;
+}
+#contact > div + div {
+  background-color: #D00000;
+}
+#contact > div + div h3 {
+  color: #00237D;
+}
 #contact #map,
 #contact #map2 {
-  height: 300px;
+  height: 600px;
   width: 100%;
   margin: 2rem 0 0 0;
 }
@@ -388,37 +423,18 @@ header::before {
   }
   #contact h2 {
     line-height: 2;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-indent: 2vw;
     font-style: normal;
-    text-shadow: 0 0 0 transparent;
     color: #bbb;
   }
-  #contact #info1 {
-    white-space: nowrap;
-    padding: 2vw;
+  #contact h3 {
+    font-size: 1rem;
   }
-  #contact #info1 p {
+  #contact h3 span {
     display: none;
   }
-  #contact #address,
-  #contact #address2,
-  #contact #map,
-  #contact #map2 {
-    width: 100%;
-    height: auto;
-    position: static;
-    display: block;
-    padding: 0;
-    margin: 0;
-  }
-  #contact #address p,
-  #contact #address2 p {
-    background-color: #bbb;
-    color: #444;
-    line-height: 2.5;
-    font-weight: bold;
-    text-align: center;
+  #contact li {
     font-size: 1rem;
   }
 }
