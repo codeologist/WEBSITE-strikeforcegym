@@ -191,7 +191,8 @@ header a {
   overflow: hidden;
   background-color: #444;
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
+  box-sizing: content-box;
 }
 #benefits h2 {
   margin: 0;
@@ -230,6 +231,7 @@ header a {
   background-color: #D00000;
   overflow: hidden;
   text-align: center;
+  box-sizing: content-box;
   padding: 2vw;
 }
 #boast h2 {
@@ -324,6 +326,7 @@ header a {
   margin: 0;
   line-height: 2;
   font-style: normal;
+  text-indent: 2vw;
 }
 #timetable h2 span {
   display: none;
@@ -331,7 +334,7 @@ header a {
 #timetable .weekday {
   text-align: left;
   border: 0;
-  text-indent: 1vw;
+  text-indent: 2vw;
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
@@ -367,9 +370,14 @@ header a {
   background-color: #444;
   color: #bbb;
   text-indent: 2rem;
-  margin: 0;
   padding: 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-shadow: 0 0 0 transparent;
+  margin: 0;
   line-height: 2;
+  font-style: normal;
+  text-indent: 2vw;
 }
 #contact h3 {
   color: white;
@@ -424,6 +432,7 @@ header a {
     text-indent: 2vw;
     font-style: normal;
     color: #bbb;
+    text-align: center;
   }
   #contact h3 {
     font-size: 1rem;
