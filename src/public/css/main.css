@@ -230,7 +230,7 @@ header a {
   background-color: #D00000;
   overflow: hidden;
   text-align: center;
-  padding: 4rem 0;
+  padding: 2vw;
 }
 #boast h2 {
   margin: 0;
@@ -246,9 +246,6 @@ header a {
   text-shadow: 0 0 transparent;
   letter-spacing: 2px;
   text-indent: 4rem;
-}
-#boast span {
-  padding-right: 2rem;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   #boast h2 {
