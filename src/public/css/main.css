@@ -445,24 +445,47 @@ header a {
 }
 #prices p {
   display: inline-block;
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1rem;
   padding: 0;
 }
 #prices p a {
   display: inline-block;
-  padding: 0 1rem;
-  line-height: 60px;
-  height: 60px;
+  padding: 1rem;
+  line-height: 1.5;
   border: 1px solid green;
+  box-sizing: content-box;
   margin: 1rem;
+}
+#prices p a br {
+  display: none;
 }
 #prices p a:hover {
   background-color: green;
   color: white;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
+  #prices h2,
+  #prices h3 {
+    font-size: 1rem;
+  }
   #prices h3 span {
     display: none;
+  }
+  #prices td {
+    white-space: nowrap;
+  }
+  #prices td + td {
+    white-space: normal;
+  }
+  #prices p {
+    display: block;
+  }
+  #prices p a {
+    display: block;
+    text-align: center;
+  }
+  #prices p a br {
+    display: block;
   }
 }
 #contact {
