@@ -7,13 +7,41 @@
       margin:0;
       padding:0;
 
+
+      &>div{
+        overflow:hidden;
+      }
+
+      &>div:nth-child(2n+1)  {
+        background-color:@sfgLightComplement;
+
+        table{
+          background-color:@sfgLight2;
+        }
+
+      }
+      &>div+div{
+        padding: 1rem;
+        box-sizing: content-box;
+        h2 {
+          color: @sfgLightComplement;
+          background-color: @sfgLight;
+        }
+      }
       table {
         width: 100%;
         margin:0;
         border: 0;
         border-collapse: collapse;
+        overflow:hidden;
+      }
+      thead{
+        border-bottom:1px solid @sfgLight;
       }
 
+      tr{
+        border: 0;
+      }
       td {
         line-height: 2;
         font-size: 1.5rem;
@@ -26,21 +54,28 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-      }
-      h2 {
 
-        background-color: #444;
-        color: #bbbbbb;;
+      }
+
+      h2 {
+        background-color: @sfgLightComplement;
+        color: @sfgLight;
+
+        text-indent: 2rem;
+        margin:0;
+        padding:0;
+        line-height: 2;
+
         text-transform: uppercase;
         font-size: 1.6rem;
         text-shadow: 0 0 0 transparent;
-        margin: 0;
-        line-height: 2;
+
         font-style: normal;
-        text-indent: 2vw;
+
         span {
           display:none;
         }
+
       }
 
       .weekday {
@@ -51,7 +86,7 @@
         margin: 0;
         font-size: 1.6rem;
         line-height: 2;
-        background-color: #bbbbbb;
+
       }
     }
 

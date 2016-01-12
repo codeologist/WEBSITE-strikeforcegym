@@ -10,7 +10,7 @@ body {
 section {
   overflow: hidden;
   margin: 0 auto;
-  padding: 3vw 1vw 1vw 1vw;
+  padding: 1rem;
 }
 section h2 {
   font-size: 2vw;
@@ -249,6 +249,27 @@ header a {
   letter-spacing: 2px;
   text-indent: 4rem;
 }
+#boast2 {
+  background-color: black;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: content-box;
+  padding: 2vw;
+}
+#boast2 iframe {
+  width: 100%;
+  height: 100%;
+}
+#boast2 div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+#boast2 h2 {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.2;
+}
 @media all and (max-width: 699px) and (min-width: 320px) {
   #boast h2 {
     font-size: 2rem;
@@ -301,11 +322,35 @@ header a {
   margin: 0;
   padding: 0;
 }
+#timetable > div {
+  overflow: hidden;
+}
+#timetable > div:nth-child(2n+1) {
+  background-color: #444;
+}
+#timetable > div:nth-child(2n+1) table {
+  background-color: #f1f1f1;
+}
+#timetable > div + div {
+  padding: 1rem;
+  box-sizing: content-box;
+}
+#timetable > div + div h2 {
+  color: #444;
+  background-color: #bbb;
+}
 #timetable table {
   width: 100%;
   margin: 0;
   border: 0;
   border-collapse: collapse;
+  overflow: hidden;
+}
+#timetable thead {
+  border-bottom: 1px solid #bbb;
+}
+#timetable tr {
+  border: 0;
 }
 #timetable td {
   line-height: 2;
@@ -322,14 +367,15 @@ header a {
 }
 #timetable h2 {
   background-color: #444;
-  color: #bbbbbb;
+  color: #bbb;
+  text-indent: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
   text-transform: uppercase;
   font-size: 1.6rem;
   text-shadow: 0 0 0 transparent;
-  margin: 0;
-  line-height: 2;
   font-style: normal;
-  text-indent: 2vw;
 }
 #timetable h2 span {
   display: none;
@@ -342,7 +388,6 @@ header a {
   margin: 0;
   font-size: 1.6rem;
   line-height: 2;
-  background-color: #bbbbbb;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   #timetable h2 {
@@ -360,6 +405,66 @@ header a {
     font-size: 1rem;
   }
 }
+#prices {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+#prices table {
+  width: 100%;
+  margin: 2rem;
+}
+#prices table thead {
+  text-align: left;
+}
+#prices table td {
+  width: 20%;
+}
+#prices table td + td {
+  width: 80%;
+}
+#prices h2 {
+  background-color: #444;
+  color: #bbb;
+  text-indent: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-shadow: 0 0 0 transparent;
+  font-style: normal;
+}
+#prices h2 span {
+  display: none;
+}
+#prices h3 {
+  text-indent: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+#prices p {
+  display: inline-block;
+  margin: 0 0 0 2rem;
+  padding: 0;
+}
+#prices p a {
+  display: inline-block;
+  padding: 0 1rem;
+  line-height: 60px;
+  height: 60px;
+  border: 1px solid green;
+  margin: 1rem;
+}
+#prices p a:hover {
+  background-color: green;
+  color: white;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #prices h3 span {
+    display: none;
+  }
+}
 #contact {
   padding: 0;
   margin: 0;
@@ -373,14 +478,13 @@ header a {
   background-color: #444;
   color: #bbb;
   text-indent: 2rem;
+  margin: 0;
   padding: 0;
+  line-height: 2;
   text-transform: uppercase;
   font-size: 1.6rem;
   text-shadow: 0 0 0 transparent;
-  margin: 0;
-  line-height: 2;
   font-style: normal;
-  text-indent: 2vw;
 }
 #contact h3 {
   color: white;
