@@ -45,18 +45,16 @@
       td {
         line-height: 2;
         font-size: 1.5rem;
-        text-indent:2vw;
+        text-indent:2rem;
         border: 0;
         width: 20%;
       }
+
       td+td{
-        width: 80%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-
+        text-indent:0;
+        width:80%;
+        line-height: 1.2;
       }
-
       h2 {
         background-color: @sfgLightComplement;
         color: @sfgLight;
@@ -93,6 +91,12 @@
     @media all and (max-width: 699px) and (min-width: 320px) {
 
       #timetable{
+
+        table{
+          overflow: hidden;
+        }
+
+        td{white-space: pre-wrap}
         h2 {
           text-align: center;
           span {

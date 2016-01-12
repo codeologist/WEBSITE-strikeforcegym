@@ -355,15 +355,14 @@ header a {
 #timetable td {
   line-height: 2;
   font-size: 1.5rem;
-  text-indent: 2vw;
+  text-indent: 2rem;
   border: 0;
   width: 20%;
 }
 #timetable td + td {
+  text-indent: 0;
   width: 80%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 #timetable h2 {
   background-color: #444;
@@ -390,6 +389,12 @@ header a {
   line-height: 2;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
+  #timetable table {
+    overflow: hidden;
+  }
+  #timetable td {
+    white-space: pre-wrap;
+  }
   #timetable h2 {
     text-align: center;
   }
@@ -416,9 +421,11 @@ header a {
 }
 #prices table thead {
   text-align: left;
+  line-height: 1.5;
 }
 #prices table td {
   width: 20%;
+  line-height: 1.5;
 }
 #prices table td + td {
   width: 80%;
@@ -455,11 +462,13 @@ header a {
   border: 1px solid green;
   box-sizing: content-box;
   margin: 1rem;
+  color: green;
 }
 #prices p a br {
   display: none;
 }
 #prices p a:hover {
+  text-decoration: none;
   background-color: green;
   color: white;
 }
@@ -514,6 +523,7 @@ header a {
 }
 #contact a {
   color: white;
+  text-decoration: underline;
 }
 #contact a:visited {
   text-decoration: underline;
