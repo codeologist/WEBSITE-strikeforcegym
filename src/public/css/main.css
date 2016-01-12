@@ -315,7 +315,10 @@ header a {
   width: 20%;
 }
 #timetable td + td {
-  width: auto;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #timetable h2 {
   background-color: #444;
