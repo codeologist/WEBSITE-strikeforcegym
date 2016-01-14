@@ -27,6 +27,12 @@ h4 {
 }
 h2 {
   font-size: 4vw;
+  font-weight: normal;
+}
+h2,
+h3,
+h4 {
+  font-weight: normal;
 }
 a {
   text-decoration: none;
@@ -165,6 +171,7 @@ header a {
 }
 #menu li {
   display: inline;
+  padding-right: 2rem;
 }
 #menu a {
   font-size: 20px;
@@ -223,9 +230,28 @@ header a {
     font-size: 2rem;
   }
 }
-#credentials {
+#about {
   font-size: 1.6rem;
-  padding: 2rem;
+  padding: 4rem;
+}
+#about h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+#about p,
+#about li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+#about li {
+  padding: .5rem 0;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  border-bottom: 1px dotted #444;
+}
+#about .tagline {
+  color: black;
+  font-weight: 500;
 }
 #boast {
   background-color: #D00000;
