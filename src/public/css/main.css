@@ -12,10 +12,6 @@ section {
   margin: 0 auto;
   padding: 1rem;
 }
-section h2 {
-  font-size: 2vw;
-  margin-bottom: 1vw;
-}
 h1,
 h2,
 h3,
@@ -23,15 +19,6 @@ h4 {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  color: #444;
-}
-h2 {
-  font-size: 4vw;
-  font-weight: normal;
-}
-h2,
-h3,
-h4 {
   font-weight: normal;
 }
 a {
@@ -63,11 +50,17 @@ button {
   box-sizing: border-box;
   width: 100%;
 }
-button {
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.6);
-  background-color: red;
-  color: #444;
-  font-weight: bold;
+#link {
+  margin: 1vw;
+  padding: 3vw;
+  background-color: #f1f1f1;
+}
+#link h2 {
+  line-height: 3;
+}
+#link code {
+  font-size: 2rem;
+  padding: 2vw;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   h1,
@@ -95,7 +88,7 @@ header h1,
 header h2,
 header h3 {
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 1rem 0;
   text-align: center;
   color: white;
 }
@@ -104,6 +97,8 @@ header h1 {
 }
 header h2 {
   font-size: 2vw;
+  background-color: transparent;
+  border: 0 none;
 }
 header h3 {
   font-size: 1.5vw;
@@ -164,23 +159,35 @@ header a {
   background-color: #00237D;
 }
 #menu ul {
-  padding: 0 20px 0 0;
+  height: 80px;
+}
+#menu ul,
+#menu li {
+  padding: 0;
   margin: 0;
   text-align: center;
-  line-height: 60px;
 }
 #menu li {
-  display: inline;
-  padding-right: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 8px;
 }
 #menu a {
-  font-size: 20px;
-  padding-right: 10px;
+  display: inline-block;
+  line-height: 64px;
+  font-size: 1.2vw;
   text-transform: uppercase;
   color: #D00000;
+  margin-right: 2vw;
+}
+#menu a span {
+  display: none;
 }
 #menu a:hover {
   color: white;
+}
+#menu .signup:hover {
+  color: #00237D;
 }
 .fixed #menu {
   position: fixed;
@@ -196,10 +203,11 @@ header a {
 }
 #benefits {
   overflow: hidden;
-  background-color: #444;
+  background-color: white;
   text-align: center;
   padding: 4rem 1rem;
   box-sizing: content-box;
+  border-bottom: 1px dotted #444;
 }
 #benefits h2 {
   margin: 0;
@@ -214,16 +222,16 @@ header a {
   font-weight: normal;
   text-shadow: 0 0 transparent;
   letter-spacing: 2px;
-  text-indent: 4rem;
+  text-indent: 0;
 }
 #benefits span {
   padding-right: 2rem;
 }
 #benefits span:first-child {
-  color: white;
+  color: #D00000;
 }
 #benefits span + span + span {
-  color: white;
+  color: black;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   #benefits h2 {
@@ -258,7 +266,7 @@ header a {
   overflow: hidden;
   text-align: center;
   box-sizing: content-box;
-  padding: 2vw;
+  padding: 10rem 1rem;
 }
 #boast h2 {
   margin: 0;
@@ -274,6 +282,9 @@ header a {
   text-shadow: 0 0 transparent;
   letter-spacing: 2px;
   text-indent: 4rem;
+}
+#boast h2 span:first-child {
+  color: black;
 }
 #boast2 {
   background-color: black;
@@ -299,314 +310,5 @@ header a {
 @media all and (max-width: 699px) and (min-width: 320px) {
   #boast h2 {
     font-size: 2rem;
-  }
-}
-#who {
-  padding: 3vw;
-  background-color: rgba(0, 0, 255, 0.7);
-  position: relative;
-}
-#who h2,
-#who h3,
-#who h4 {
-  color: white;
-  text-shadow: 0 0 1vw rgba(255, 255, 255, 0.7);
-}
-#who h3 {
-  font-size: 3vw;
-}
-#who h4 {
-  margin-top: 2vw;
-}
-#who ul {
-  padding: 0;
-}
-#who li {
-  display: inline-block;
-  width: 12.5vw;
-  height: 18.75vw;
-  border: 1px dotted #ccc;
-  margin-right: 1vw;
-  margin-bottom: 1vw;
-}
-#who li a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 18.75vw;
-  text-align: center;
-  text-transform: uppercase;
-  font-style: italic;
-  color: white;
-  text-shadow: 0 0 1vw rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-}
-#what {
-  background-color: green;
-}
-#timetable {
-  margin: 0;
-  padding: 0;
-}
-#timetable > div {
-  overflow: hidden;
-}
-#timetable > div:nth-child(2n+1) {
-  background-color: #444;
-}
-#timetable > div:nth-child(2n+1) table {
-  background-color: #f1f1f1;
-}
-#timetable > div + div {
-  padding: 1rem;
-  box-sizing: content-box;
-}
-#timetable > div + div h2 {
-  color: #444;
-  background-color: #bbb;
-}
-#timetable table {
-  width: 100%;
-  margin: 0;
-  border: 0;
-  border-collapse: collapse;
-  overflow: hidden;
-}
-#timetable thead {
-  border-bottom: 1px solid #bbb;
-}
-#timetable tr {
-  border: 0;
-}
-#timetable td {
-  line-height: 2;
-  font-size: 1.5rem;
-  text-indent: 2rem;
-  border: 0;
-  width: 20%;
-}
-#timetable td + td {
-  text-indent: 0;
-  width: 80%;
-  line-height: 1.2;
-}
-#timetable h2 {
-  background-color: #444;
-  color: #bbb;
-  text-indent: 2rem;
-  margin: 0;
-  padding: 0;
-  line-height: 2;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-shadow: 0 0 0 transparent;
-  font-style: normal;
-}
-#timetable h2 span {
-  display: none;
-}
-#timetable .weekday {
-  text-align: left;
-  border: 0;
-  text-indent: 2vw;
-  padding: 0;
-  margin: 0;
-  font-size: 1.6rem;
-  line-height: 2;
-}
-@media all and (max-width: 699px) and (min-width: 320px) {
-  #timetable table {
-    overflow: hidden;
-  }
-  #timetable td {
-    white-space: pre-wrap;
-  }
-  #timetable h2 {
-    text-align: center;
-  }
-  #timetable h2 span {
-    display: none;
-  }
-  #timetable .weekday {
-    text-align: center;
-  }
-  #timetable td,
-  #timetable h2,
-  #timetable .weekday {
-    font-size: 1rem;
-  }
-}
-#prices {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-#prices table {
-  width: 100%;
-  margin: 2rem;
-}
-#prices table thead {
-  text-align: left;
-  line-height: 1.5;
-}
-#prices table td {
-  width: 20%;
-  line-height: 1.5;
-}
-#prices table td + td {
-  width: 80%;
-}
-#prices h2 {
-  background-color: #444;
-  color: #bbb;
-  text-indent: 2rem;
-  margin: 0;
-  padding: 0;
-  line-height: 2;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-shadow: 0 0 0 transparent;
-  font-style: normal;
-}
-#prices h2 span {
-  display: none;
-}
-#prices h3 {
-  text-indent: 2rem;
-  font-size: 1.6rem;
-  line-height: 2;
-}
-#prices p {
-  display: inline-block;
-  margin: 0 0 0 1rem;
-  padding: 0;
-}
-#prices p a {
-  display: inline-block;
-  padding: 1rem;
-  line-height: 1.5;
-  border: 1px solid green;
-  box-sizing: content-box;
-  margin: 1rem;
-  color: green;
-}
-#prices p a br {
-  display: none;
-}
-#prices p a:hover {
-  text-decoration: none;
-  background-color: green;
-  color: white;
-}
-@media all and (max-width: 699px) and (min-width: 320px) {
-  #prices h2,
-  #prices h3 {
-    font-size: 1rem;
-  }
-  #prices h3 span {
-    display: none;
-  }
-  #prices td {
-    white-space: nowrap;
-  }
-  #prices td + td {
-    white-space: normal;
-  }
-  #prices p {
-    display: block;
-  }
-  #prices p a {
-    display: block;
-    text-align: center;
-  }
-  #prices p a br {
-    display: block;
-  }
-}
-#contact {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  background-color: white;
-  height: 1781px;
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-#contact h2 {
-  background-color: #444;
-  color: #bbb;
-  text-indent: 2rem;
-  margin: 0;
-  padding: 0;
-  line-height: 2;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-shadow: 0 0 0 transparent;
-  font-style: normal;
-}
-#contact h3 {
-  color: white;
-}
-#contact a {
-  color: white;
-  text-decoration: underline;
-}
-#contact a:visited {
-  text-decoration: underline;
-  color: white;
-}
-#contact a:hover {
-  text-decoration: underline;
-  color: white;
-}
-#contact ul {
-  margin-top: .5rem;
-}
-#contact br {
-  display: none;
-}
-#contact > div {
-  background-color: #00237D;
-  color: white;
-  padding: 2rem;
-  box-sizing: content-box;
-}
-#contact > div h3 {
-  color: #D00000;
-}
-#contact > div + div {
-  background-color: #D00000;
-}
-#contact > div + div h3 {
-  color: #00237D;
-}
-#contact #map,
-#contact #map2 {
-  height: 600px;
-  width: 100%;
-  margin: 2rem 0 0 0;
-}
-@media all and (max-width: 699px) and (min-width: 320px) {
-  #contact {
-    height: auto;
-    padding: 0;
-    margin: 0;
-  }
-  #contact h2 {
-    line-height: 2;
-    font-size: 1rem;
-    text-indent: 2vw;
-    font-style: normal;
-    color: #bbb;
-    text-align: center;
-  }
-  #contact h3 {
-    font-size: 1rem;
-  }
-  #contact h3 span {
-    display: none;
-  }
-  #contact li {
-    font-size: 1rem;
   }
 }

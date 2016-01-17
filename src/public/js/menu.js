@@ -1,12 +1,13 @@
 
 
+
 jQuery("document").ready(function($){
 
     var body = $('body');
     var bp = $("header").outerHeight(true);
+    var navHeight = 80;//$("nav").outerHeight(true);
 
-
-    $("#menu a").click( function( e ){
+    $("#menu a[href*=#]").click( function( e ){
 
         e.preventDefault();
         var y, target = this.href.split("#")[1];
@@ -14,9 +15,7 @@ jQuery("document").ready(function($){
         if ( target === "home"){
             y=0;
         } else {
-
-            y = $( "#" + target ).offset().top-60;
-
+            y = $( "#" + target ).offset().top-navHeight;
         }
 
         $("body").animate( {"scrollTop": y }, 1000 ,"easeInCirc");

@@ -1,0 +1,438 @@
+html {
+  font-family: arial;
+}
+body {
+  color: #444;
+  padding: 0 0 0 0;
+  margin: 0;
+  background-color: white;
+}
+section {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 1rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #00237D;
+}
+a:visited {
+  text-decoration: underline;
+}
+a:hover {
+  color: #D00000;
+  text-decoration: underline;
+}
+footer {
+  font-size: 3rem;
+  padding: 5rem;
+}
+a[name] {
+  display: block;
+}
+input,
+textarea,
+button {
+  margin-top: 1vw;
+  font-size: 1vw;
+  padding: 1vw;
+  box-sizing: border-box;
+  width: 100%;
+}
+#link {
+  margin: 1vw;
+  padding: 3vw;
+  background-color: #f1f1f1;
+}
+#link h2 {
+  line-height: 3;
+}
+#link code {
+  font-size: 2rem;
+  padding: 2vw;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  section h2 {
+    text-shadow: 0 0 0 transparent;
+    margin: 0;
+    padding: 0;
+  }
+  #about,
+  #who,
+  #what,
+  #menu {
+    display: none;
+  }
+}
+#menu {
+  background-color: #00237D;
+}
+#menu ul {
+  height: 80px;
+}
+#menu ul,
+#menu li {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#menu li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 8px;
+}
+#menu a {
+  display: inline-block;
+  line-height: 64px;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  color: #D00000;
+  margin-right: 2vw;
+}
+#menu a span {
+  display: none;
+}
+#menu a:hover {
+  color: white;
+}
+#menu .signup:hover {
+  color: #00237D;
+}
+.fixed #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+  background-color: rgba(0, 35, 125, 0.8);
+  box-shadow: 0 0 15px 5px rgba(68, 68, 68, 0.8);
+}
+.fixed #benefits {
+  margin-top: 60px;
+}
+#timetable {
+  margin: 0;
+  padding: 0;
+}
+#timetable > div {
+  overflow: hidden;
+}
+#timetable > div:nth-child(2n+1) {
+  background-color: #444;
+}
+#timetable > div:nth-child(2n+1) table {
+  background-color: #f1f1f1;
+}
+#timetable > div + div {
+  padding: 1rem;
+  box-sizing: content-box;
+}
+#timetable > div + div h2 {
+  color: #444;
+  background-color: #bbb;
+}
+#timetable table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+#timetable thead {
+  border-bottom: 1px solid #bbb;
+}
+#timetable tr {
+  border: 0;
+}
+#timetable td {
+  border: 0;
+  width: 20%;
+}
+#timetable td + td {
+  text-indent: 0;
+  width: 80%;
+  line-height: 1.2;
+}
+#timetable .weekday {
+  text-align: left;
+  border: 0;
+  text-indent: 2vw;
+  padding: 2rem 0 0 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #timetable table {
+    overflow: hidden;
+  }
+  #timetable td {
+    white-space: pre-wrap;
+  }
+  #timetable h2 {
+    text-align: center;
+  }
+  #timetable h2 span {
+    display: none;
+  }
+  #timetable .weekday {
+    text-align: center;
+  }
+  #timetable td,
+  #timetable h2,
+  #timetable .weekday {
+    font-size: 1rem;
+  }
+}
+#prices {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+#prices table {
+  width: 100%;
+  margin: 2rem;
+}
+#prices table thead {
+  text-align: left;
+  line-height: 1.5;
+}
+#prices table td {
+  width: 20%;
+  line-height: 1.5;
+}
+#prices table td + td {
+  width: 80%;
+}
+#prices h3 {
+  text-indent: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+#prices p {
+  display: inline-block;
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+#prices p a {
+  display: inline-block;
+  padding: 1rem;
+  line-height: 1.5;
+  border: 1px solid green;
+  box-sizing: content-box;
+  margin: 1rem;
+  color: green;
+}
+#prices p a br {
+  display: none;
+}
+#prices p a:hover {
+  text-decoration: none;
+  background-color: green;
+  color: white;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #prices h2,
+  #prices h3 {
+    font-size: 1rem;
+  }
+  #prices h3 span {
+    display: none;
+  }
+  #prices td {
+    white-space: nowrap;
+  }
+  #prices td + td {
+    white-space: normal;
+  }
+  #prices p {
+    display: block;
+  }
+  #prices p a {
+    display: block;
+    text-align: center;
+  }
+  #prices p a br {
+    display: block;
+  }
+}
+#contact {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: white;
+  height: 594px;
+  border-bottom: 1px solid black;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+#contact p {
+  padding: 2rem;
+}
+#contact h3 {
+  color: white;
+}
+#contact a {
+  color: white;
+  text-decoration: underline;
+}
+#contact a:visited {
+  text-decoration: underline;
+  color: white;
+}
+#contact a:hover {
+  text-decoration: underline;
+  color: white;
+}
+#contact ul {
+  margin-top: .5rem;
+}
+#contact #map,
+#contact #map2 {
+  height: 300px;
+  width: 100%;
+  margin: 2rem 0 0 0;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  #contact {
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  #contact h2 {
+    line-height: 2;
+    font-size: 1rem;
+    text-indent: 2vw;
+    font-style: normal;
+    color: #bbb;
+    text-align: center;
+  }
+  #contact h3 {
+    font-size: 1rem;
+  }
+  #contact h3 span {
+    display: none;
+  }
+  #contact li {
+    font-size: 1rem;
+  }
+}
+h2 {
+  border-top: 1px dotted white;
+  background-color: black;
+  color: white;
+  text-indent: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-shadow: 0 0 0 transparent;
+  font-style: normal;
+}
+td {
+  line-height: 2;
+  font-size: 1.5rem;
+  text-indent: 2rem;
+}
+.signup {
+  background-color: white;
+  font-weight: bold;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 1vw;
+}
+.signup:hover {
+  color: #00237D;
+}
+header {
+  position: relative;
+  height: 31.25vw;
+  padding-top: 11.25vw;
+}
+header h1,
+header h2,
+header h3 {
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: white;
+}
+header h1 {
+  font-size: 6vw;
+}
+header h2 {
+  font-size: 2vw;
+  background-color: transparent;
+  border: 0 none;
+}
+header h3 {
+  font-size: 1.5vw;
+  color: white;
+  margin-top: 2vw;
+}
+header::before {
+  content: "";
+  background-image: url(/img/IMG_0867.JPG);
+  background-size: cover;
+  background-position-y: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+header a {
+  display: none;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  header {
+    overflow: hidden;
+    background-color: #00237D;
+    margin: 0;
+    height: auto;
+    padding: 0 0 3rem 0;
+  }
+  header h1 {
+    padding: 1.5rem 0;
+    margin: 0;
+    text-align: center;
+    color: #D00000;
+    text-shadow: 0;
+    font-size: 2rem;
+  }
+  header h2 {
+    display: none;
+  }
+  header a {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5vw;
+    background-color: white;
+    line-height: 3rem;
+    font-weight: bold;
+    text-indent: 2vw;
+    padding: 1px;
+  }
+  header a img {
+    vertical-align: middle;
+    float: right;
+  }
+}

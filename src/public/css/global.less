@@ -4,7 +4,7 @@
   }
   body{
 
-    color:#444;
+    color: @sfgLightComplement;
     padding: 0 0 0 0;
     margin:0;
     background-color: white;
@@ -15,32 +15,17 @@
     overflow: hidden;
     margin: 0 auto;
     padding: 1rem;
-    h2 {
-      font-size: 2vw;
-      margin-bottom: 1vw;
-    }
   }
 
-  body section:nth-child(2n+1)  {
-
-
-  }
 
   h1,h2,h3,h4{
     text-transform: uppercase;
     padding:0;
     margin:0;
-    color: #444;
-  }
-
-  h2 {
-    font-size: 4vw;
     font-weight:normal;
   }
 
-  h2,h3,h4 {
-    font-weight:normal;
-  }
+
   a {
     text-decoration: none;
 
@@ -72,11 +57,22 @@
     width: 100%;
   }
 
-  button {
-    box-shadow:  0 0 1px 1px  rgba(0,0,0,.6);
-    background-color : red;
-    color:#444;
-    font-weight:bold;
+
+
+  #link {
+    margin: 1vw;
+    padding: 3vw;
+    background-color: @sfgLight2;
+
+    h2 {
+      line-height: 3;
+    }
+
+
+    code {
+      font-size: 2rem;
+      padding: 2vw;
+    }
   }
 
 

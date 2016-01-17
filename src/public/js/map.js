@@ -10,7 +10,7 @@ function init() {
     // Basic options for a simple Google Map
     var mapOptions = {
 
-        zoom: 17, // How zoomed in you want the map to start at (always required)
+        zoom: 18, // How zoomed in you want the map to start at (always required)
         scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
 
         // The latitude and longitude to center the map (always required)
@@ -218,27 +218,28 @@ function init() {
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement1 = document.getElementById('map');
+    if ( mapElement1 ){
+        var map1 = new google.maps.Map(mapElement1, mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(-36.9025367,174.688000),
+            map: map1,
+            title: 'Strikeforce Gym New Lynn',
+            icon: 'img/map-marker.png'
+
+        });
+    }
     var mapElement2 = document.getElementById('map2');
+    if ( mapElement2 ){
+        var map2 = new google.maps.Map(mapElement2, mapOptions2);
+        var marker2 = new google.maps.Marker({
+            position: new google.maps.LatLng(-43.5327838,172.6455112),
+            map: map2,
+            title: 'Strikeforce Gym Cantebury',
+            icon: 'img/map-marker.png'
 
-    // Create the Google Map using our element and options defined above
-    var map1 = new google.maps.Map(mapElement1, mapOptions);
-    var map2 = new google.maps.Map(mapElement2, mapOptions2);
+        });
+    }
 
 
-        // Let's also add a marker while we're at it
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(-36.9025367,174.688000),
-        map: map1,
-        title: 'Strikeforce Gym New Lynn',
-        icon: 'img/map-marker.png'
 
-    });
-
-    var marker2 = new google.maps.Marker({
-        position: new google.maps.LatLng(-43.5327838,172.6455112),
-        map: map2,
-        title: 'Strikeforce Gym Cantebury',
-        icon: 'img/map-marker.png'
-
-    });
-};
+}

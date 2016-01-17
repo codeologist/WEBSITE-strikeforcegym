@@ -2,26 +2,39 @@
 
   background-color: @sfgblue;
 
-  ul{
-    padding:0 20px 0 0;
-    margin:0;
+  ul {
+    height: 80px;
+  }
+  ul,li{
+    padding: 0;
+    margin: 0;
     text-align:center;
-    line-height: 60px;
   }
 
+ li {
+   display:inline-block;
+   vertical-align: middle;
+   margin-top:8px;
+ }
 
-  li{
-    display:inline;
-    padding-right: 2rem;
-  }
+
   a {
-    font-size: 20px;
-    padding-right: 10px;
+    display:inline-block;
+    line-height: 64px;
+    font-size: 1.2vw;
     text-transform: uppercase;
     color: @sfgred;
+    margin-right: 2vw;
+
+    span {
+      display:none;
+    }
   }
   a:hover {
     color:white;
+  }
+  .signup:hover{
+    color:@sfgblue;
   }
 }
 
