@@ -17,13 +17,13 @@ html
 
         nav#menu
             ul
-                li
+                li.drop
                     a(href="/") home
-                li
+                li.drop
                     a(href="#timetable") timetable
-                li
+                li.drop
                     a(href="#prices") pricing
-                li
+                li.drop
                     a(href="#contact") address
                 include ./signup.jade
                 include ./fblink.jade
@@ -134,10 +134,13 @@ html
 
             h2 pricing
             div
+                h3 Price Per Week
+                ul
+                    li Direct debit through Debit Success
+                    li no contract term
+                    li includes all classes
+
                 table(align="center",border="0")
-                    thead
-                        tr
-                            th(colspan="2") Price Per Week (Direct debit through Debit Success, no contract term, includes all classes)
                     tbody
                         tr
                             td ADULT
@@ -145,11 +148,12 @@ html
                         tr
                             td CHILD
                             td $15
+                h3 Casual Price Per Class
+                ul
+                    li cash only
+                    li no fee for open mat classes
 
                 table(align="center",border="0")
-                    thead
-                        tr
-                            th(colspan="2") Casual Price Per Class (cash only, no fee for open mat classes)
                     tbody
                         tr
                             td ADULT

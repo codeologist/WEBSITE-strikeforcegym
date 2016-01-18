@@ -5,6 +5,7 @@
     height:31.25vw;
     padding-top: 11.25vw;
 
+
     h1, h2, h3 {
       padding:0;
       margin: 0 0 1rem 0;
@@ -27,6 +28,18 @@
       color:white;
       margin-top: 2vw;
     }
+    &::after{
+      content:"";
+      background-color: @sfglogodark;
+      background-image: url(/img/IMG_1029.JPG);
+      background-size:contain;
+      background-repeat:no-repeat;
+      width: 240px;
+      height: 54px;
+      position:absolute;
+      top: 5vw;
+      left:5vw;
+    }
 
     &::before {
       content: "";
@@ -48,20 +61,31 @@
 
   @media all and (max-width: 699px) and (min-width: 320px) {
 
+    #promo{
+      display:none;
+    }
     header{
+      &::after{
+        display:none;
+      }
       overflow: hidden;
-      background-color: @sfgblue;
+      background-color: @sfglogodark;
+      background-image: url(/img/IMG_1029.JPG);
+      background-size:contain;
+      background-repeat:no-repeat;
       margin:0;
       height: auto;
-      padding:  0 0 3rem 0;
+      padding:  23vw 0 0 0;
 
       h1 {
+        background-color: @sfglogodark;
         padding: 1.5rem 0;
         margin:0;
         text-align:center;
-        color: @sfgred;
+        color: white;
         text-shadow: 0;
-        font-size: 2rem;
+        font-size: 4vw;
+        border-top:1px dotted white;
       }
       h2 {
         display:none;

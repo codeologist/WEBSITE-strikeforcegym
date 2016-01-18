@@ -1,88 +1,18 @@
 
   #prices{
-
-    overflow: hidden;
-
     padding: 0;
     margin:0;
-
-    table{
-      width:100%;
-      margin: 2rem;
-      thead{
-        text-align: left;
-        line-height: 1.5;
-      }
-      td {
-        width: 20%;
-        line-height: 1.5;
-      }
-      td+td {
-        width: 80%;
-      }
-    }
-
-
-    h3{
-      text-indent:2rem;
-      font-size: 1.6rem;
-      line-height: 2;
-    }
-    p {
-      display:inline-block;
-      margin:0 0 0 1rem;
-      padding:0;
-
-      a {
-
-        br {
-          display:none;
-        }
-        display:inline-block;
-        padding: 1rem;
-        line-height: 1.5;
-
-        border: 1px solid green;
-       box-sizing: content-box;
-        margin: 1rem;
-        color: green;
-        &:hover{
-          text-decoration: none;
-          background-color:green;
-          color:white;
-        }
-      }
-    }
   }
 
   @media all and (max-width: 699px) and (min-width: 320px) {
 
     #prices{
-      h2,h3{
+      h3{font-weight: bold;
+      margin-top:3rem;}
+      h3,tr {
         font-size: 1rem;
       }
-      h3 {
-        span {
-          display: none;
-        }
-      }
-      td{
-        white-space: nowrap;
-      }
-      td+td{
-        white-space: normal;
-      }
-      p {
-        display: block;
-        a{
 
-          display: block;
-          text-align:center;
-          br {
-            display: block;
-          }
-        }
-      }
 
     }
   }

@@ -16,8 +16,13 @@
    vertical-align: middle;
    margin-top:8px;
  }
-
-
+  .signup {
+    margin-right: 2vw;
+    a {
+      margin: 0 2vw;
+      padding:0;
+    }
+  }
   a {
     display:inline-block;
     line-height: 64px;
@@ -46,8 +51,39 @@
   z-index:100000;
   background-color: @sfgblue80;
   box-shadow:  0 0 15px 5px  @sfgLightComplement80;
-
 }
+
 .fixed #benefits {
   margin-top: 60px;
+}
+
+@media all and (max-width: 699px) and (min-width: 320px) {
+  .fixed #menu{
+    position: static;
+    background-color: @sfglogodark;
+    box-shadow: 0 0 0 0 transparent;
+  }
+  #menu{
+    background-color: @sfglogodark;
+    .drop{display:none;}
+    .signup{
+
+      font-size:3vw;
+      margin-right: 2vw;
+      position:relative;
+      width:30vw;
+      a {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        display:  block;
+        text-align: center;
+        margin:0;
+        padding:0;
+
+      }
+    }
+  }
 }

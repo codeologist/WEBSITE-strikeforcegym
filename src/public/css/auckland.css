@@ -74,8 +74,7 @@ button {
   }
   #about,
   #who,
-  #what,
-  #menu {
+  #what {
     display: none;
   }
 }
@@ -95,6 +94,13 @@ button {
   display: inline-block;
   vertical-align: middle;
   margin-top: 8px;
+}
+#menu .signup {
+  margin-right: 2vw;
+}
+#menu .signup a {
+  margin: 0 2vw;
+  padding: 0;
 }
 #menu a {
   display: inline-block;
@@ -125,6 +131,36 @@ button {
 .fixed #benefits {
   margin-top: 60px;
 }
+@media all and (max-width: 699px) and (min-width: 320px) {
+  .fixed #menu {
+    position: static;
+    background-color: #0B0F0E;
+    box-shadow: 0 0 0 0 transparent;
+  }
+  #menu {
+    background-color: #0B0F0E;
+  }
+  #menu .drop {
+    display: none;
+  }
+  #menu .signup {
+    font-size: 3vw;
+    margin-right: 2vw;
+    position: relative;
+    width: 30vw;
+  }
+  #menu .signup a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
 #timetable {
   margin: 0;
   padding: 0;
@@ -146,32 +182,10 @@ button {
   color: #444;
   background-color: #bbb;
 }
-#timetable table {
-  width: 100%;
-  margin: 0;
-  border: 0;
-  border-collapse: collapse;
-  overflow: hidden;
-}
-#timetable thead {
-  border-bottom: 1px solid #bbb;
-}
-#timetable tr {
-  border: 0;
-}
-#timetable td {
-  border: 0;
-  width: 20%;
-}
-#timetable td + td {
-  text-indent: 0;
-  width: 80%;
-  line-height: 1.2;
-}
 #timetable .weekday {
   text-align: left;
   border: 0;
-  text-indent: 2vw;
+  text-indent: 7vw;
   padding: 2rem 0 0 0;
   margin: 0;
   font-size: 1.6rem;
@@ -184,14 +198,8 @@ button {
   #timetable td {
     white-space: pre-wrap;
   }
-  #timetable h2 {
-    text-align: center;
-  }
   #timetable h2 span {
     display: none;
-  }
-  #timetable .weekday {
-    text-align: center;
   }
   #timetable td,
   #timetable h2,
@@ -200,75 +208,17 @@ button {
   }
 }
 #prices {
-  overflow: hidden;
   padding: 0;
   margin: 0;
 }
-#prices table {
-  width: 100%;
-  margin: 2rem;
-}
-#prices table thead {
-  text-align: left;
-  line-height: 1.5;
-}
-#prices table td {
-  width: 20%;
-  line-height: 1.5;
-}
-#prices table td + td {
-  width: 80%;
-}
-#prices h3 {
-  text-indent: 2rem;
-  font-size: 1.6rem;
-  line-height: 2;
-}
-#prices p {
-  display: inline-block;
-  margin: 0 0 0 1rem;
-  padding: 0;
-}
-#prices p a {
-  display: inline-block;
-  padding: 1rem;
-  line-height: 1.5;
-  border: 1px solid green;
-  box-sizing: content-box;
-  margin: 1rem;
-  color: green;
-}
-#prices p a br {
-  display: none;
-}
-#prices p a:hover {
-  text-decoration: none;
-  background-color: green;
-  color: white;
-}
 @media all and (max-width: 699px) and (min-width: 320px) {
-  #prices h2,
   #prices h3 {
+    font-weight: bold;
+    margin-top: 3rem;
+  }
+  #prices h3,
+  #prices tr {
     font-size: 1rem;
-  }
-  #prices h3 span {
-    display: none;
-  }
-  #prices td {
-    white-space: nowrap;
-  }
-  #prices td + td {
-    white-space: normal;
-  }
-  #prices p {
-    display: block;
-  }
-  #prices p a {
-    display: block;
-    text-align: center;
-  }
-  #prices p a br {
-    display: block;
   }
 }
 #contact {
@@ -314,14 +264,6 @@ button {
     padding: 0;
     margin: 0;
   }
-  #contact h2 {
-    line-height: 2;
-    font-size: 1rem;
-    text-indent: 2vw;
-    font-style: normal;
-    color: #bbb;
-    text-align: center;
-  }
   #contact h3 {
     font-size: 1rem;
   }
@@ -336,7 +278,7 @@ h2 {
   border-top: 1px dotted white;
   background-color: black;
   color: white;
-  text-indent: 2rem;
+  text-indent: 7vw;
   margin: 0;
   padding: 0;
   line-height: 2;
@@ -345,10 +287,39 @@ h2 {
   text-shadow: 0 0 0 transparent;
   font-style: normal;
 }
-td {
+h3 {
+  line-height: 2;
+  text-indent: 7vw;
+}
+ul {
+  margin-left: 11vw;
+  padding-left: 1rem;
+}
+table {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  border: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+thead {
+  border-bottom: 1px solid #bbb;
+}
+tr {
+  border: 0;
   line-height: 2;
   font-size: 1.5rem;
-  text-indent: 2rem;
+  text-indent: 7vw;
+}
+td {
+  border: 0;
+  width: 20%;
+}
+td + td {
+  padding-left: 7vw;
+  text-indent: 0;
+  width: 80%;
+  line-height: 1.2;
 }
 .signup {
   background-color: white;
@@ -359,6 +330,14 @@ td {
 }
 .signup:hover {
   color: #00237D;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  h2 {
+    font-size: 1rem;
+  }
+  th {
+    font-size: 1rem;
+  }
 }
 header {
   position: relative;
@@ -386,6 +365,18 @@ header h3 {
   color: white;
   margin-top: 2vw;
 }
+header::after {
+  content: "";
+  background-color: #0B0F0E;
+  background-image: url(/img/IMG_1029.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 240px;
+  height: 54px;
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+}
 header::before {
   content: "";
   background-image: url(/img/IMG_0867.JPG);
@@ -402,20 +393,31 @@ header a {
   display: none;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
+  #promo {
+    display: none;
+  }
   header {
     overflow: hidden;
-    background-color: #00237D;
+    background-color: #0B0F0E;
+    background-image: url(/img/IMG_1029.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
     margin: 0;
     height: auto;
-    padding: 0 0 3rem 0;
+    padding: 23vw 0 0 0;
+  }
+  header::after {
+    display: none;
   }
   header h1 {
+    background-color: #0B0F0E;
     padding: 1.5rem 0;
     margin: 0;
     text-align: center;
-    color: #D00000;
+    color: white;
     text-shadow: 0;
-    font-size: 2rem;
+    font-size: 4vw;
+    border-top: 1px dotted white;
   }
   header h2 {
     display: none;

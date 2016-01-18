@@ -4,7 +4,7 @@
     border-top: 1px dotted white;
     background-color: black;
     color: white;
-    text-indent: 2rem;
+    text-indent: 7vw;
     margin:0;
     padding:0;
     line-height: 2;
@@ -12,14 +12,49 @@
     font-size: 1.6rem;
     text-shadow: 0 0 0 transparent;
     font-style: normal;
+  }
 
+  h3{
+    line-height: 2;
+    text-indent: 7vw;
+  }
+
+  ul{
+   margin-left:11vw;
+    padding-left: 1rem;
+  }
+
+  table {
+    width: 100%;
+    margin:0 0 2rem 0;
+    border: 0;
+    border-collapse: collapse;
+    overflow:hidden;
+  }
+
+  thead{
+    border-bottom:1px solid @sfgLight;
+  }
+
+  tr {
+    border: 0;
+    line-height: 2;
+    font-size: 1.5rem;
+    text-indent: 7vw;
   }
 
   td {
-    line-height: 2;
-    font-size: 1.5rem;
-    text-indent:2rem;
+    border: 0;
+    width: 20%;
   }
+
+  td+td{
+    padding-left: 7vw;
+    text-indent: 0;
+    width:80%;
+    line-height: 1.2;
+  }
+
 
   .signup {
     background-color: white;
@@ -32,4 +67,15 @@
       color:@sfgblue;
     }
 
+  }
+
+
+  @media all and (max-width: 699px) and (min-width: 320px) {
+    h2{
+      font-size: 1rem;
+    }
+
+    th {
+      font-size: 1rem;
+    }
   }

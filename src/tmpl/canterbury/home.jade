@@ -16,13 +16,13 @@ html
 
         nav#menu
             ul
-                li
+                li.drop
                     a(href="/") home
-                li
+                li.drop
                     a(href="#timetable") timetable
-                li
+                li.drop
                     a(href="#prices") pricing
-                li
+                li.drop
                     a(href="#contact") address
                 include ./signup.jade
                 include ./fblink.jade
@@ -44,8 +44,11 @@ html
                             th(colspan="2").weekday MONDAY
                     tbody
                         tr
-                            td 9.30am-10.30am
+                            td 9.30am
                             td Womans Boxfit (open to public, gold coin donation)
+                        tr
+                            td 10.30am
+                            td
                         tr
                             td 4.00pm
                             td COLTS MMA (under 11-16yrs)
@@ -106,7 +109,7 @@ html
                             th(colspan="2").weekday FRIDAY
                     tbody
                         tr
-                            td 5.00pm-6pm
+                            td 5.00pm
                             td Womans BoxFit (Non-Members $5 per class)
                         tr
                             td 6.00pm
@@ -143,25 +146,35 @@ html
 
             h2 pricing
             div
+                h3 Price Per Week
+                ul
+                    li Direct debit through Debit Success
+
+                h3 short term
                 table(align="center",border="0")
-                    thead
-                        tr
-                            th(colspan="2") Price Per Week (Direct debit through Debit Success)
                     tbody
                         tr
-                            td ADULT Short term
+                            td ADULT
                             td $25
                         tr
-                            td ADULT Long term
+                            td CHILD
+                            td $15
+
+                h3 long term
+                table(align="center",border="0")
+                    tbody
+                        tr
+                            td ADULT
                             td $20
                         tr
-                            td CHILD Long term
+                            td CHILD
                             td $10
 
+                h3 Casual Price Per Class
+                ul
+                    li cash only
+
                 table(align="center",border="0")
-                    thead
-                        tr
-                            th(colspan="2") Casual Price Per Class (cash only)
                     tbody
                         tr
                             td ADULT
