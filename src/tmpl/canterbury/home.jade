@@ -13,6 +13,10 @@ html
         header
             h1 Strikeforce Canterbury
             include ../include/tagline.jade
+            ul#headerlinks
+                include ./signup.jade
+                include ./fblink.jade
+                include ./phonelink.jade
 
         nav#menu
             ul
@@ -24,9 +28,6 @@ html
                     a(href="#prices") pricing
                 li.drop
                     a(href="#contact") address
-                include ./signup.jade
-                include ./fblink.jade
-                include ./phonelink.jade
 
         section#promo
             <iframe src="https://www.youtube.com/embed/AA7qgP62WXM" frameborder="0" allowfullscreen></iframe>

@@ -53,14 +53,26 @@ button {
 #link {
   margin: 1vw;
   padding: 3vw;
-  background-color: #f1f1f1;
-}
-#link h2 {
-  line-height: 3;
 }
 #link code {
   font-size: 2rem;
   padding: 2vw;
+  display: block;
+  background-color: #f1f1f1;
+}
+#link h2 {
+  line-height: 1.8;
+  margin-bottom: 2vw;
+  margin-top: 5vw;
+  border-bottom: 1px dotted black;
+}
+#link p,
+#link li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+#link li {
+  border-bottom: 1px dotted black;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
   h1,
@@ -72,16 +84,55 @@ button {
     margin: 0;
     padding: 0;
   }
-  #about,
-  #who,
-  #what {
-    display: none;
-  }
 }
 header {
   position: relative;
   height: 31.25vw;
   padding-top: 11.25vw;
+}
+header #headerlinks {
+  position: absolute;
+  top: 28vw;
+  left: 28vw;
+  margin: 0;
+  width: 50%;
+  padding: 2vw;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+header #headerlinks a {
+  display: inline-block;
+}
+header li {
+  display: inline-block;
+  padding: 0 2vw;
+  border: 0;
+  vertical-align: middle;
+}
+header a {
+  border: 2px solid #444;
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 0;
+  line-height: 64px;
+  border-radius: 5px;
+}
+header a span {
+  display: none;
+}
+header a:hover {
+  color: white;
+}
+header .signup a {
+  background-color: white;
+  color: #00237D;
+  padding: 0 2vw;
+  text-indent: 0;
+}
+header .signup a:hover {
+  color: white;
+  background-color: #00237D;
 }
 header h1,
 header h2,
@@ -145,6 +196,17 @@ header a {
     height: auto;
     padding: 23vw 0 0 0;
   }
+  header #headerlinks {
+    position: static;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+  }
+  header #headerlinks a {
+    margin: 0;
+  }
   header::after {
     display: none;
   }
@@ -180,6 +242,9 @@ header a {
 #menu {
   background-color: #00237D;
 }
+#menu .mobile {
+  display: none;
+}
 #menu ul {
   height: 80px;
 }
@@ -194,13 +259,6 @@ header a {
   vertical-align: middle;
   margin-top: 8px;
 }
-#menu .signup {
-  margin-right: 2vw;
-}
-#menu .signup a {
-  margin: 0 2vw;
-  padding: 0;
-}
 #menu a {
   display: inline-block;
   line-height: 64px;
@@ -209,14 +267,8 @@ header a {
   color: #D00000;
   margin-right: 2vw;
 }
-#menu a span {
-  display: none;
-}
 #menu a:hover {
   color: white;
-}
-#menu .signup:hover {
-  color: #00237D;
 }
 .fixed #menu {
   position: fixed;
@@ -242,22 +294,96 @@ header a {
   #menu .drop {
     display: none;
   }
-  #menu .signup {
-    font-size: 3vw;
-    margin-right: 2vw;
-    position: relative;
-    width: 30vw;
+}
+#menu {
+  background-color: #00237D;
+}
+#menu ul,
+#menu li {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#menu li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 8px;
+  line-height: 80px;
+}
+#menu a {
+  display: inline-block;
+  line-height: 64px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #D00000;
+  margin-right: 2vw;
+}
+#menu a:hover {
+  color: white;
+}
+.fixed #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+  background-color: rgba(0, 35, 125, 0.8);
+  box-shadow: 0 0 15px 5px rgba(68, 68, 68, 0.8);
+}
+.fixed #benefits {
+  margin-top: 60px;
+}
+@media all and (max-width: 699px) and (min-width: 320px) {
+  .mobile {
+    display: inline;
   }
-  #menu .signup a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .fixed #menu {
+    position: static;
+    background-color: #0B0F0E;
+    box-shadow: 0 0 0 0 transparent;
+  }
+  #menu {
+    background-color: #0B0F0E;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+  }
+  #menu .drop {
+    display: none;
+  }
+  #menu ul {
+    height: auto;
+  }
+  #menu li {
+    position: relative;
     display: block;
-    text-align: center;
-    margin: 0;
+    border-top: 1px dotted white;
+    line-height: .9;
     padding: 0;
+    margin: 0;
+    text-align: center;
+    text-indent: 5vw;
+  }
+  #menu li:hover {
+    background-color: #444;
+  }
+  #menu a {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    vertical-align: middle;
+  }
+  #menu a + a {
+    font-size: 1rem;
+  }
+  #menu a + a img {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    position: absolute;
+    right: 5vw;
+    top: 1.1rem;
   }
 }
 #benefits {
@@ -340,7 +466,6 @@ header a {
   font-weight: normal;
   text-shadow: 0 0 transparent;
   letter-spacing: 2px;
-  text-indent: 4rem;
 }
 #boast h2 span:first-child {
   color: black;

@@ -15,16 +15,22 @@ html
             h1 Strikeforce Gym
             include ./include/tagline.jade
 
-            a(href="tel:+64211772320") 10 Drury St, New Lynn, Auckland.
-                    img(src="img/phone.png")
-            a(href="tel:+64210709531") 295 Cashel St, Christchurch Central.
-                    img(src="img/phone.png")
         nav#menu
             ul
                 li
-                    a(href="/auckland") auckland
+                    a(href="/auckland")
+                        span.mobile &nbsp;10 Drury St, New Lynn,&nbsp;
+                        span Auckland
+                        span.mobile .
+                    a.mobile(href="tel:+64211772320")
+                        img(src="img/phone.png")
                 li
-                    a(href="/canterbury") canterbury
+                    a(href="/canterbury")
+                        span.mobile &nbsp;295 Cashel St,&nbsp;
+                        span Christchurch
+                        span.mobile &nbsp;Central.
+                    a.mobile(href="tel:+64210709531")
+                        img(src="img/phone.png")
                 li
                     a(href="/linktous") link to us
 

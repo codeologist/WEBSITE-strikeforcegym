@@ -14,6 +14,10 @@ html
         header
             h1 Strikeforce Auckland
             include ../include/tagline.jade
+            ul#headerlinks
+                include ./signup.jade
+                include ./fblink.jade
+                include ./phonelink.jade
 
         nav#menu
             ul
@@ -25,9 +29,6 @@ html
                     a(href="#prices") pricing
                 li.drop
                     a(href="#contact") address
-                include ./signup.jade
-                include ./fblink.jade
-                include ./phonelink.jade
 
         section#timetable
             <a name="timetable"></a>
