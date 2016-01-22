@@ -180,9 +180,6 @@ button {
   margin-top: 60px;
 }
 @media all and (max-width: 699px) and (min-width: 320px) {
-  .mobile {
-    display: inline;
-  }
   .fixed #menu {
     position: static;
     background-color: #0B0F0E;
@@ -196,6 +193,9 @@ button {
   }
   #menu .drop {
     display: none;
+  }
+  #menu .mobile {
+    display: inline;
   }
   #menu ul {
     height: auto;
