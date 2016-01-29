@@ -17,6 +17,7 @@
         app.get("/linktous", require( "./pages/link" ) );
 
         app.get("/preview", require( "./pages/home" ) );
+        app.get("/links", require( "./pages/links" ) );
 
     }
 
