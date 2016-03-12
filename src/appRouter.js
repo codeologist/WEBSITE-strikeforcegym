@@ -19,6 +19,8 @@
         app.get("/preview", require( "./pages/home" ) );
         app.get("/links", require( "./pages/links" ) );
 
+        app.get("/auckland/bootcamp", require( "./pages/bootcamp" ) );
+
     }
 
     module.exports = Application;

@@ -1,0 +1,52 @@
+html
+    head
+
+        <meta charset="utf-8">
+        <title>Strikeforce Gym</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="Muay Thai, MMA, Kickboxing">
+        include ./include/head.jade
+
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+
+        script
+            include ./include/googleanalytics.js
+        include ./include/fbanalytics.jade
+    body
+        header
+            h1 Strikeforce Gym
+            include ./include/tagline.jade
+
+        nav#menu
+            ul
+                li
+                    a(href="/auckland")
+                        span.mobile &nbsp;10 Drury St, New Lynn,&nbsp;
+                        span Auckland
+                        span.mobile .
+                    a.mobile(href="tel:+64211772320")
+                        img(src="img/phone.png")
+                li
+                    a(href="/canterbury")
+                        span.mobile &nbsp;295 Cashel St,&nbsp;
+                        span Christchurch
+                        span.mobile &nbsp;Central.
+                    a.mobile(href="tel:+64210709531")
+                        img(src="img/phone.png")
+
+        div
+            h1 2016 ELITE MMA BOOTCAMP
+            p April 23 - April 24, Apr 23 at 9 AM to Apr 24 at 4 PM
+            p Early bird price buy now.
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="JXQN4G6NL89TW">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+
+        footer
+            p To BE the best you have to BEAT the best... so come TRAIN WITH the BEST. Welcome to STRIKE FORCE...
+
+        include ./include/after.jade
