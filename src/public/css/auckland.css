@@ -554,3 +554,11 @@ header a {
     float: right;
   }
 }
+#bootcamp {
+  margin: 20px;
+  text-align: center;
+}
+#bootcamp form {
+  width: 350px;
+  margin: 20px auto;
+}

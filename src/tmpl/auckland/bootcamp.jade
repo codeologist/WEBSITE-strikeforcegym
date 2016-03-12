@@ -5,18 +5,18 @@ html
         <title>Strikeforce Gym</title>
         <meta name="description" content="">
         <meta name="keywords" content="Muay Thai, MMA, Kickboxing">
-        include ./include/head.jade
+        include ../include/head.jade
 
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="/css/auckland.css" rel="stylesheet" type="text/css">
 
 
         script
-            include ./include/googleanalytics.js
-        include ./include/fbanalytics.jade
+            include ../include/googleanalytics.js
+        include ../include/fbanalytics.jade
     body
         header
             h1 Strikeforce Gym
-            include ./include/tagline.jade
+            include ../include/tagline.jade
 
         nav#menu
             ul
@@ -35,7 +35,7 @@ html
                     a.mobile(href="tel:+64210709531")
                         img(src="img/phone.png")
 
-        div
+        div#bootcamp
             h1 2016 ELITE MMA BOOTCAMP
             p April 23 - April 24, Apr 23 at 9 AM to Apr 24 at 4 PM
             p Early bird price buy now.
@@ -49,4 +49,4 @@ html
         footer
             p To BE the best you have to BEAT the best... so come TRAIN WITH the BEST. Welcome to STRIKE FORCE...
 
-        include ./include/after.jade
+        include ../include/after.jade
