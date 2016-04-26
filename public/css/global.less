@@ -1,0 +1,46 @@
+
+  html{
+    font-family: arial;
+    font-size: 62.5%;
+  }
+
+  body{
+    color:@color-text;
+    padding: 0;
+    margin:0;
+    background-color: white;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  nav {
+
+    background-color:@color-background;
+    border-bottom: 1px solid @color-border;
+
+    line-height: 4;
+
+    font-size: 2.5rem;
+
+    #logo{
+
+      display: inline-block;
+
+      padding: 0 5rem;
+
+      a{
+        color:@color-secondary;
+
+      }
+      &:before{
+        content:"#";
+
+        color:@color-secondary;
+      }
+
+
+    }
+
+  }
