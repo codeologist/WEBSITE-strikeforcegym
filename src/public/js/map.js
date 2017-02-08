@@ -14,7 +14,7 @@ function init() {
         scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(-36.9025367,174.687434),
+        center: new google.maps.LatLng( -36.9033429,174.6866887),
 
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
