@@ -221,7 +221,7 @@ function init() {
     if ( mapElement1 ){
         var map1 = new google.maps.Map(mapElement1, mapOptions);
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-36.9025367,174.688000),
+            position: new google.maps.LatLng( -36.9033429,174.6866887 ),
             map: map1,
             title: 'Strikeforce Gym New Lynn',
             icon: 'img/map-marker.png'
