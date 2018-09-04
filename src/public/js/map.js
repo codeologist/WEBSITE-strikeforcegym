@@ -14,7 +14,7 @@ function init() {
         scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng( -36.9033429,174.6866887),
+        center: new google.maps.LatLng( -36.8991467,174.6992411),
 
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
@@ -211,7 +211,7 @@ function init() {
         scrollwheel: false, //set to true to enable mouse scrolling while inside the map area
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(-43.5327838,172.6455112),
+        center: new google.maps.LatLng(-36.8991467,174.6992411),
     };
 
 
@@ -221,7 +221,7 @@ function init() {
     if ( mapElement1 ){
         var map1 = new google.maps.Map(mapElement1, mapOptions);
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng( -36.9033429,174.6866887 ),
+            position: new google.maps.LatLng( -36.8991467,174.6992411 ),
             map: map1,
             title: 'Strikeforce Gym New Lynn',
             icon: 'img/map-marker.png'
@@ -232,7 +232,7 @@ function init() {
     if ( mapElement2 ){
         var map2 = new google.maps.Map(mapElement2, mapOptions2);
         var marker2 = new google.maps.Marker({
-            position: new google.maps.LatLng(-43.5327838,172.6455112),
+            position: new google.maps.LatLng(-36.8991467,174.6992411),
             map: map2,
             title: 'Strikeforce Gym Cantebury',
             icon: 'img/map-marker.png'
